@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hostel Booking System</title>
+    <title>LASU Hostel Booking System</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
@@ -10,7 +10,7 @@
     <div class="container clearfix">
       <div class="form login">
         <h3>Sign In</h3>
-        <form>
+        <form id="login">
           <p>
             <label>Username or email address<span>*</span></label>
             <input type="email" required />
@@ -29,5 +29,15 @@
         <a href="../dashboard/index.html">Move to dashbaord</a>
       </div>
     </div>
+
+    <script>
+      const signUpForm = document.querySelector(".login");
+signUpForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  
+
+ location.replace("../dashboard/index.html")
+})
+  </script>
   </body>
 </html>

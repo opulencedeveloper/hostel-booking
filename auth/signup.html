@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hostel Booking System</title>
+        <title>LASU Hostel Booking System</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" />
@@ -12,33 +12,37 @@
                 <h3>
                     Sign Up
                 </h3>
-                <form>
+                <form class="sign-up">
                     <p>
                         <label>First name<span>*</span></label>
-                        <input type="text" required>
+                        <input id="first-name" type="text" required>
                     </p>
                     <p>
                         <label>Last name<span>*</span></label>
-                        <input type="text" required>
+                        <input id="last-name" type="text" required>
                     </p>
                     <p>
-                        <label>Reg No.<span>*</span></label>
-                        <input type="email" required>
+                        <label>Matric No.<span>*</span></label>
+                        <input id="mat-no" type="text" required>
                     </p>
                     <p>
                         <label>Department<span>*</span></label>
-                        <input type="email" required>
+                        <input id="department" type="text" required>
+                    </p>
+                    <p>
+                        <label>Faculty<span>*</span></label>
+                        <input id="faculty" type="text" required>
                     </p>
                     <p>
                         <label>Level<span>*</span></label>
-                        <input type="email" required>
+                        <input  type="number" required>
                     </p>
                     <p>
                         <label>Password<span>*</span></label>
                         <input type="password" required>
                     </p>
                     <p>
-                        <label>Again password<span>*</span></label>
+                        <label>Confirm password<span>*</span></label>
                         <input type="password" required>
                     </a>
                     <p>
@@ -52,5 +56,19 @@
                 <a href="../dashboard/index.html">Move to dashboard</a>
             </div>
         </div>
+        <script>
+            const signUpForm = document.querySelector(".sign-up");
+      signUpForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const firstName = document.getElementById("first-name").value;
+        localStorage.setItem("first-name", firstName)
+        localStorage.setItem("last-name", document.getElementById("last-name").value)
+        localStorage.setItem("mat-no", document.getElementById("mat-no").value)
+        localStorage.setItem("faculty", document.getElementById("faculty").value)
+        localStorage.setItem("department", document.getElementById("department").value)
+
+       location.replace("../dashboard/index.html")
+      })
+        </script>
     </body>
 </html>
