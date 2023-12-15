@@ -15,12 +15,7 @@
 
   /* Your regular styles go here */
 
-/* Media query for screens with a maximum width of 767 pixels (commonly used for mobile devices) */
-@media only screen and (max-width: 767px) {
-    .header-font {
-        font-size: 14px; 
-      }
-  }
+
   
   
 
@@ -107,6 +102,7 @@
 }
 
 @media (max-width: 991.98px) {
+    
     .navbar-dark .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
